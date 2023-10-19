@@ -1,0 +1,167 @@
+/* CONSIGNE :
+dans le dossier 2_exo_css_selector, et avec le code fourni dans page.html,
+mettez en place les selecteurs listés dans le fichier questions.txt.
+Vous devrez placer ces selecteurs dans un fichier séparé style.css 
+en les prefixant (en commentaires) par S_+n° (soit S_1 à S_30)  */
+
+
+/* S_1 - Sélectionnez tous les éléments <div> ayant la classe "box" */
+
+div .box {
+    background-color: antiquewhite;
+}
+
+/* S_2 - Sélectionnez le premier élément <div> ayant la classe "box" */
+
+/* ------------------------------------ NE FONCTIONNE PAS ------------------------------------ */
+
+div .box:first {
+    background-color: antiquewhite;
+}
+
+
+/* S_3 - Sélectionnez tous les éléments <li> de la liste <ul> */
+
+ul li {
+    background-color: antiquewhite;
+}
+
+/* S_4 - Sélectionnez le dernier élément <li> de la liste <ul> */
+
+ul li:last-of-type {
+    background-color: antiquewhite;
+}
+
+/* S_5 - Sélectionnez tous les éléments <p> qui sont des enfants directs de <body> */
+
+body > p {
+    background-color: antiquewhite;
+}
+
+/* S_6 - Sélectionnez tous les éléments <a> ayant un attribut href commençant par "https" */
+a[href^="https"]{
+    background-color: antiquewhite;
+}
+
+/* S_7 - Sélectionnez tous les éléments <a> ayant un attribut href se terminant par ".com" */
+a[href$=".com"]{
+    background-color: antiquewhite;
+}
+
+/* S_8 - Sélectionnez tous les éléments <a> ayant un attribut href contenant "example" */
+a[href*="example"]{
+    background-color: antiquewhite;
+}
+
+/* S_9 - Sélectionnez tous les éléments <td> qui sont des descendants directs de <table> */
+
+table > td {
+    background-color: antiquewhite;
+}
+
+/* S_10 - Sélectionnez tous les éléments <td> qui sont des descendants directs de la première ligne <tr> de la table. */
+
+tr:first-of-type > td {
+    background-color: antiquewhite;
+}
+
+/* S_11 - Sélectionnez tous les éléments <th> qui sont des frères précédents de <td> dans la table. */
+
+/* ------------------------------------ NE FONCTIONNE PAS ------------------------------------ */
+
+/* S_12 - Sélectionnez tous les éléments <td> qui sont des frères suivants de <th> dans la table. */
+table th ~ td {
+    color:red;
+}
+
+/* S_13 - Sélectionnez tous les éléments <div> qui sont des enfants directs de l'élément avec l'id "container".*/
+#container > div {
+    background-color: antiquewhite;
+}
+
+/* S_14 - Sélectionnez tous les éléments <div> qui sont des enfants directs de l'élément avec l'id "container" et qui ont une classe "box" */ 
+
+#container > div.box{
+    background-color: antiquewhite;
+}
+
+/* S_15 - [...] mais excluez le premier élément */
+#container > div.box:not(:first-child){
+    background-color: antiquewhite;
+}
+
+/* S_16 - [...] mais excluez les deux premiers éléments */
+#container > div.box:not(:nth-child(-n+2)){
+    background-color: antiquewhite;
+}
+
+/* S_17 - [...] mais excluez les trois premiers éléments */
+#container > div.box:not(:nth-child(-n+3)){
+    background-color: antiquewhite;
+}
+
+/* S_18 - [...] mais excluez les quatre premiers éléments */
+#container > div.box:not(:nth-child(-n+4)){
+    background-color: antiquewhite;
+}
+
+/* S_19 - [...] mais excluez les cinq premiers éléments */
+#container > div.box:not(:nth-child(-n+5)){
+    background-color: antiquewhite;
+}
+
+/* S_20 - [...] mais excluez les six premiers éléments */
+#container > div.box:not(:nth-child(-n+6)){
+    background-color: antiquewhite;
+}
+
+/* S_21 - [...] mais excluez les sept premiers éléments */
+#container > div.box:not(:nth-child(-n+7)){
+    background-color: antiquewhite;
+}
+
+/* S_22 - [...] mais excluez les huit premiers éléments */
+#container > div.box:not(:nth-child(-n+8)){
+    background-color: antiquewhite;
+}
+
+/* S_23 - [...] mais excluez les neuf premiers éléments */
+#container > div.box:not(:nth-child(-n+9)){
+    background-color: antiquewhite;
+}
+
+/* S_24 - [...] mais excluez les dix premiers éléments */
+#container > div.box:not(:nth-child(-n+10)){
+    background-color: antiquewhite;
+}
+
+/* S_25 - [...] mais excluez les cinq derniers éléments */
+#container > div.box:not(:nth-last-child(-n+5)){
+    background-color: antiquewhite;
+}
+
+/* S_26 - [...] mais excluez les quatre derniers éléments */
+#container > div.box:not(:nth-last-child(-n+4)){
+    background-color: antiquewhite;
+}
+
+/* S_27 - [...] mais excluez les trois derniers éléments */
+#container > div.box:not(:nth-last-child(-n+3)){
+    background-color: antiquewhite;
+}
+
+/* S_28 - [...] mais excluez les deux derniers éléments */
+#container > div.box:not(:nth-last-child(-n+2)){
+    background-color: antiquewhite;
+}
+
+
+/* S_29 - [...] mais excluez le dernier élément */
+#container > div.box:not(:last-child){
+    background-color: antiquewhite;
+}
+
+/* S_30 - [...] mais excluez les deux derniers éléments et le premier élément */
+#container > div.box:not(:nth-last-child(-n+2), :first-child){
+    background-color: antiquewhite;
+}

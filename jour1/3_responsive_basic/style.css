@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+section{
+    text-align: center;
+}
+
+.main_container{
+    display: grid;
+}
+
+.Section_A {
+    background-color: lightblue;
+    grid-area: a;
+}
+
+.Section_B {
+    background-color: lightgray;
+    grid-area: b;
+}
+
+.Section_C {
+    background-color: lightgreen;
+    grid-area: c;
+}
+
+.Section_D {
+    background-color: lightpink;
+    grid-area: d;
+}
+
+.Section_E {
+    background-color: lightseagreen;
+    grid-area: e;
+}
+
+.Section_F {
+    background-color: lightslategray;
+    grid-area: f;
+}
+
+
+
+@media screen and (max-width : 768px) {
+
+    .main_container{
+        gap: 0.50em;
+        margin: 0.50em;
+        height: 200vh;
+        min-height: 500px;
+        grid-template-areas: 
+            "a" 
+            "b"
+            "d"
+            "d"
+            "d"
+            "d"
+            "d"
+            "d"
+            "d"
+            "c"
+            "e"
+            "f"
+        ;
+    }
+  }
+
+
+@media screen and (min-width:768px) and (max-width : 1440px) {
+
+    .main_container{
+        gap: 0.75em;
+        margin: 0.75em;
+        height: 95vh;
+        min-height: 500px;
+        grid-template-areas: 
+            "a a a a a a"
+            "b b b b b b"
+            "c d d d d d"
+            "c d d d d d"
+            "c d d d d d"
+            "c d d d d d"
+            "c d d d d d"
+            "c d d d d d"
+            "e f f f f f"
+        ;
+    }
+
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .main_container{
+        gap:1em;
+        margin: 1em;
+        height: 95vh;
+        min-height: 500px;
+        grid-template-areas: 
+            "a a a a a a"
+            "c b b b b e"
+            "c d d d d e"
+            "c d d d d e"
+            "c d d d d e"
+            "c d d d d e"
+            "c d d d d e"
+            "f f f f f f"
+        ;
+    }
+
+
+  }
